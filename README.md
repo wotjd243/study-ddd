@@ -32,7 +32,7 @@
 
 ## 모델링
 
-<!--TODO (1) Pokemon 엔티티 만들기-->
-<!--TODO (2) isCaught() 만들기 -->
+<!--COMPLETED (1) Pokemon 엔티티 만들기-->
+<!--COMPLETED (2) isCaught() 만들기 -->
 
-<!--TODO (3) PokemonTest 만들기 및 단위 테스트-->
+<!--COMPLETED (3) PokemonTest 만들기 및 단위 테스트-->
