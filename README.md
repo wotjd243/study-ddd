@@ -32,4 +32,7 @@
 
 ## 모델링
 
-<!--COMPLETED (1) 크게 소리 내어 모델링 하기-->
+<!--TODO (1) Pokemon 엔티티 만들기-->
+<!--TODO (2) isCaught() 만들기 -->
+
+<!--TODO (3) PokemonTest 만들기 및 단위 테스트-->
