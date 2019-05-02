@@ -14,4 +14,8 @@ public class Pokemon {
     public boolean isCaught(final int number) {
         return this.captureRate <= number;
     }
+
+    public int getCaptureRate() {
+        return captureRate;
+    }
 }
