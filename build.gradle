@@ -17,7 +17,7 @@ repositories {
 dependencies {
     // Spring and Spring Boot dependencies
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
-    // TODO (1) SpringBootApplication 추가
+    // COMPLETED (1) SpringBootApplication 추가
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // webjars
