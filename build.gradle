@@ -17,7 +17,9 @@ repositories {
 dependencies {
     // Spring and Spring Boot dependencies
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
-    // COMPLETED (1) SpringBootApplication 추가
+    // TODO (1) spring-boot-starter-web 의존성 추가
+    // TODO (2) system > WelcomeController 만들기
+    // TODO (3) "/"로 접근 시, welcome.html을 보여주도록 구현
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // webjars
