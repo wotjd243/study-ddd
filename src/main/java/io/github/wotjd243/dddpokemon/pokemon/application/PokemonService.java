@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PokemonService {
-    // TODO (1) PokemonServiceTest 만들기 및 단위 테스트
+    // TODO (1) PokemonServiceTest 만들기
+    // TODO (2) @Mock을 사용하여 PokemonRepository Mock 만들기
+    // TODO (3) @@InjectMocks을 사용하여 PokemonService에 Mock 주입
+    // TODO (4) PokemonServiceTest 단위 테스트
     private PokemonRepository pokemonRepository;
 
     public PokemonService(final PokemonRepository pokemonRepository) {
