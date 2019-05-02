@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        // COMPLETED (1) RandomUtils.nextInt()를 이용하여 pokemon > domain > Catching SERVICE 만들기
-        // COMPLETED (2) CatchingServiceTest 만들기 및 단위 테스트
+        // TODO (1) pokemon > application > PokemonService 만들기
+        // TODO (2) 생성자를 통해 PokemonRepository를 주입 받도록 구현
+        // TODO (3) 전국 도감 번호를 입력받아 Pokemon을 조회해오는 기능 구현
+        // TODO (4) 조회해온 Pokmon으로 CatchingService를 생성하여 isCaught()를 반환하도록 구현
+        // TODO (5) PokemonService를 컴포넌트로 등록하기
     }
 }
