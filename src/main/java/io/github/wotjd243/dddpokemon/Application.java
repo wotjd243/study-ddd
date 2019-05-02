@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        // COMPLETED (1) pokemon > domain > Pokemon REPOSITORY 인터페이스 만들기
-        // COMPLETED (2) infra > DummyPokemonData을 사용하는 Pokemon REPOSITORY 구현체 만들기
+        // TODO (1) RandomUtils.nextInt()를 이용하여 pokemon > domain > Catching SERVICE 만들기
+        // TODO (2) CatchingServiceTest 만들기 및 단위 테스트
     }
 }
