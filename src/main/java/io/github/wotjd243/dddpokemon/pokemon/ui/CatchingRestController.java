@@ -7,12 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CatchingRestController {
-    // COMPLETED (1) CatchingRestControllerTest 만들기
-    // COMPLETED (2) 클래스명 위에 @RunWith(SpringRunner.class) 추가하기
-    // COMPLETED (3) 클래스명 위에 @SpringBootTest 추가하기
-    // COMPLETED (4) 클래스명 위에  @AutoConfigureMockMvc 추가하기
-    // COMPLETED (5) MockMvc 주입하기
-    // COMPLETED (6) CatchingRestControllerTest 단위 테스트
     private PokemonService pokemonService;
 
     public CatchingRestController(final PokemonService pokemonService) {
