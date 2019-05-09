@@ -18,6 +18,7 @@ dependencies {
     // Spring and Spring Boot dependencies
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // TODO (1) spring-boot-starter-data-jpa 의존성 추가
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // webjars
@@ -25,4 +26,7 @@ dependencies {
     implementation 'org.webjars:jquery:3.4.0'
     implementation 'org.webjars:popper.js:1.15.0'
     implementation 'org.webjars:bootstrap:4.3.1'
+
+    // Databases
+    // TODO (2) com.h2database:h2 의존성 추가
 }
