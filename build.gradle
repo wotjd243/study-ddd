@@ -12,7 +12,10 @@ description = 'Pokemon project with domain-driven design'
 
 repositories {
     mavenCentral()
-    // TODO (1) maven repository 추가 ('http://jcenter.bintray.com')
+    // COMPLETED (1) maven repository 추가 ('http://jcenter.bintray.com')
+    maven {
+        url 'http://jcenter.bintray.com'
+    }
 }
 
 dependencies {
@@ -32,5 +35,6 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
 
     // PokeAPI
-    // TODO (2) me.sargunvohra.lib:pokekotlin:2.3.0 추가
+    // COMPLETED (2) me.sargunvohra.lib:pokekotlin:2.3.0 추가
+    implementation 'me.sargunvohra.lib:pokekotlin:2.3.0'
 }
