@@ -1,7 +1,7 @@
 package io.github.wotjd243.dddpokemon.pokemon.domain;
 
 public class Pokemon {
-    private NationalPokedexNumber number;
+    private final NationalPokedexNumber number;
     private final String name;
     private final int captureRate;
 
