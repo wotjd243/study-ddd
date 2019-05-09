@@ -1,5 +1,6 @@
 package io.github.wotjd243.dddpokemon.trainer.domain;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -8,6 +9,9 @@ public class Trainer {
     @Id
     private String id;
     private int level;
+
+    @Embedded
+    private Party party;
 
     private Trainer() {
     }
