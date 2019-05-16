@@ -17,6 +17,10 @@ public class NationalPokedexNumber {
         return new NationalPokedexNumber(number);
     }
 
+    public int getNumber() {
+        return number;
+    }
+
     private void validate(final int number) {
         if (number < MINIMUM_NUMBER && number > MAXIMUM_NUMBER) {
             throw new IllegalArgumentException();

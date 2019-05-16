@@ -34,6 +34,5 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
 
     // PokeAPI
-    // COMPLETED (2) me.sargunvohra.lib:pokekotlin:2.3.0 추가
     implementation 'me.sargunvohra.lib:pokekotlin:2.3.0'
 }
