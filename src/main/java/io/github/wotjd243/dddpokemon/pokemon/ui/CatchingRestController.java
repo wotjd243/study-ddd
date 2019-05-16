@@ -17,12 +17,9 @@ public class CatchingRestController {
     @GetMapping("/pokemon/catch/{number}")
     public boolean tryCatch(
             @PathVariable int number,
-            // COMPLETED (13) 트레이너 아이디를 @RequestParam 으로 추가
-            // COMPLETED (14) 아이템 아이디를 @RequestParam 으로 추가
             @RequestParam String trainerId,
             @RequestParam long itemId
     ) {
-        // COMPLETED (15) catchPokemon() 수정
         return pokemonService.catchPokemon(number, trainerId, itemId);
     }
 }

@@ -14,30 +14,26 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class PokemonService {
     private PokemonRepository pokemonRepository;
-    // COMPLETED (5) 트레이너 서비스를 필드로 추가
-    // COMPLETED (6) 아이템 서비스를 필드로 추가
     private TrainerService trainerService;
     private ItemService itemService;
+    // TODO (1) ApplicationEventPublisher 를 필드로 추가
 
-    // COMPLETED (7) 트레이너 서비스와 아이템 서비스를 생성자를 통해 주입 받도록 변경
+    // TODO (2) 생성자를 통해 주입 받도록 변경
     public PokemonService(final PokemonRepository pokemonRepository, final TrainerService trainerService, final ItemService itemService) {
         this.pokemonRepository = pokemonRepository;
         this.trainerService = trainerService;
         this.itemService = itemService;
     }
 
-    // COMPLETED (8) 포켓몬 번호 외에 트레이너 아이디와 아이템 아이디를 인자로 받도록 수정
     @Transactional
     public boolean catchPokemon(final int number, final String trainerId, final long itemId) {
         final Pokemon pokemon = getPokemon(number);
-        // COMPLETED (9) 트레이너 서비스를 통해 트레이너 AGGREGATE 조회
-        // COMPLETED (10) 아이템 서비스를 통해 아이템 AGGREGATE 조회
-        // COMPLETED (11) CatchingService 수정
         final Trainer trainer = trainerService.getTrainer(trainerId);
         final Item item = itemService.getItem(itemId);
         final CatchingService catchingService = new CatchingService(pokemon, trainer, item);
-        // COMPLETED (12) 잡는 것에 성공하면 트레이너 서비스의 registerNewPokemon()를 호출하도록 변경
         final boolean caught = catchingService.isCaught();
+        // TODO (3) 트레이너 아이디, 포켓몬 번호, 포켓몬 이름, 잡는 것 성공 여부를 담을 이벤트 만들기
+        // TODO (4) 잡혔을 때 publishEvent()
         if (caught) {
             trainerService.registerNewPokemon(trainerId, pokemon.getNumber(), pokemon.getName());
         }
