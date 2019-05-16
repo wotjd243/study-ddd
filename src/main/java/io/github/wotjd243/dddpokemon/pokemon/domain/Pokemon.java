@@ -15,6 +15,14 @@ public class Pokemon {
         return this.captureRate <= number;
     }
 
+    public int getNumber() {
+        return number.getNumber();
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public int getCaptureRate() {
         return captureRate;
     }
