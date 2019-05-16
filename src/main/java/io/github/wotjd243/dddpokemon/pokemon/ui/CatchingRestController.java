@@ -16,7 +16,10 @@ public class CatchingRestController {
     @GetMapping("/pokemon/catch/{number}")
     public boolean tryCatch(
             @PathVariable int number
+            // TODO (13) 트레이너 아이디를 @RequestParam 으로 추가
+            // TODO (14) 아이템 아이디를 @RequestParam 으로 추가
     ) {
         return pokemonService.catchPokemon(number);
+        // TODO (15) catchPokemon() 수정
     }
 }

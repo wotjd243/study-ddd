@@ -8,6 +8,8 @@ import javax.persistence.Id;
 public class Trainer {
     private final static int START_LEVEL = 1;
     private final static int MAXIMUM_LEVEL = 30;
+    private final static int BONUS_LEVEL = 11;
+    private final static int DEFAULT_BONUS = 1;
 
     @Id
     private String id;
@@ -42,7 +44,18 @@ public class Trainer {
         return this.level;
     }
 
+    public int getBonus() {
+        if (level >= BONUS_LEVEL) {
+            return calculateBonus();
+        }
+        return DEFAULT_BONUS;
+    }
+
     public int getSizeOfParty() {
         return this.party.size();
+    }
+
+    private int calculateBonus() {
+        return level / 10;
     }
 }
