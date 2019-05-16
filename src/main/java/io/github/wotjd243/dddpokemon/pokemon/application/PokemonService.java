@@ -21,6 +21,7 @@ public class PokemonService {
     }
 
     private Pokemon getPokemon(final int number) {
+    public Pokemon getPokemon(final int number) {
         return pokemonRepository.findById(NationalPokedexNumber.valueOf(number))
                 .orElseThrow(IllegalArgumentException::new)
                 ;

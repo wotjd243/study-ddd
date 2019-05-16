@@ -25,7 +25,7 @@ public class TrainerService {
         return trainer;
     }
 
-    private Trainer getTrainer(final String id) {
+    public Trainer getTrainer(final String id) {
         return trainerRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
                 ;
