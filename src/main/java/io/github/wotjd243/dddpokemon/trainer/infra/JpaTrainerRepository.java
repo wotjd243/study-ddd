@@ -14,8 +14,9 @@ public class JpaTrainerRepository implements TrainerRepository {
     private EntityManager entityManager;
 
     @Override
-    public void save(final Trainer trainer) {
+    public Trainer save(final Trainer trainer) {
         this.entityManager.persist(trainer);
+        return trainer;
     }
 
     @Override

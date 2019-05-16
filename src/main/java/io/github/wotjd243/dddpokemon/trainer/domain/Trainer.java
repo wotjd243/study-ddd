@@ -6,6 +6,9 @@ import javax.persistence.Id;
 
 @Entity
 public class Trainer {
+    private final static int START_LEVEL = 1;
+    private final static int MAXIMUM_LEVEL = 30;
+
     @Id
     private String id;
     private int level;
@@ -16,8 +19,30 @@ public class Trainer {
     private Trainer() {
     }
 
-    public Trainer(final String id, final int level) {
+    public Trainer(final String id) {
         this.id = id;
-        this.level = level;
+        this.level = START_LEVEL;
+        this.party = new Party();
+    }
+
+    public boolean isNew() {
+        return this.party.size() == 0;
+    }
+
+    public boolean registerNewPokemon(final int pokedexNumber, final String nickname) {
+        final boolean success = this.party.add(new PokemonCaught(pokedexNumber, nickname));
+        levelUp();
+        return success;
+    }
+
+    public int levelUp() {
+        if (this.level < MAXIMUM_LEVEL) {
+            this.level++;
+        }
+        return this.level;
+    }
+
+    public int getSizeOfParty() {
+        return this.party.size();
     }
 }

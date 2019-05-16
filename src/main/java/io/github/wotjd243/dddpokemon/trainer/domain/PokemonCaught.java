@@ -4,11 +4,14 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class PokemonCaught {
-    private final int number;
-    private final String nickname;
+    private int pokedexNumber;
+    private String nickname;
 
-    public PokemonCaught(final int number, final String nickname) {
-        this.number = number;
+    private PokemonCaught() {
+    }
+
+    public PokemonCaught(final int pokedexNumber, final String nickname) {
+        this.pokedexNumber = pokedexNumber;
         this.nickname = nickname;
     }
 }
