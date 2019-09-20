@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'io.github.wotjd243'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+description = 'Pokemon project with domain-driven design'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.webjars:webjars-locator:0.36'
+    implementation 'org.webjars:jquery:3.4.0'
+    implementation 'org.webjars:popper.js:1.15.0'
+    implementation 'org.webjars:bootstrap:4.3.1'
+}
