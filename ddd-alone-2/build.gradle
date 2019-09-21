@@ -4,6 +4,8 @@ plugins {
     id 'java'
 }
 
+ext['junit-jupiter.version'] = '5.5.2'
+
 group = 'io.github.wotjd243'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -18,7 +20,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'com.h2database:h2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'junit'
+    }
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
     implementation 'org.webjars:webjars-locator:0.36'
     implementation 'org.webjars:jquery:3.4.0'
     implementation 'org.webjars:popper.js:1.15.0'
